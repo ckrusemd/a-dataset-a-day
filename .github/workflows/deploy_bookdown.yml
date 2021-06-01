@@ -31,8 +31,8 @@ jobs:
       #  run: sudo R CMD javareconf
       #- name: Install Rjava before tabulizer
       #  run:  Rscript -e 'install.packages("rJava"); library(rJava); install.packages("devtools")'
-      - name: Install "devtools"
-        run: install.packages("devtools")
+      - name: Install devtools
+        run: Rscript -e 'install.packages("devtools")'
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown","bookdown","pacman","devtools","RCurl","rPref","rvest","tabulizer"))'
       - name: Render Book

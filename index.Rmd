@@ -1,0 +1,34 @@
+--- 
+title: "A Dataset A Day"
+author: "Christian Kruse"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: ckrusemd/a-dataset-a-day
+description: ""
+knit: (function(inputFile, encoding) { 
+    rmarkdown::render(inputFile,
+                      encoding=encoding, 
+                      output_file=file.path('index.html')) })
+---
+
+# A Dataset A Day
+
+... keeps the doctor away.
+
+A collection of medical dataset visualizations and analyses. 
+
+* Predictive Modelling
+* Survival Analysis
+* Inference
+* Visualizations
+
+```{r include=FALSE}
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
